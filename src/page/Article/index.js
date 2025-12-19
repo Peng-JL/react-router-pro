@@ -15,12 +15,17 @@
     语法说明：
       通过调用navigate方法传入地址path实现跳转
 */
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useSearchParams,useParams } from "react-router-dom";
 const Article = () => {
+  const {id} = useParams();
+  const {name} = useParams();
+  // const [params] = useSearchParams();
+  // const id = params.get("id");
+  // const name = params.get("name");
   const navigate = useNavigate();
   return (
     <div>
-      <h1>我是Article</h1>
+      <h1>我是Article:{id}-{name}</h1>
       <button onClick={() => navigate('/login')}>跳转到login</button>
     </div>
   );
