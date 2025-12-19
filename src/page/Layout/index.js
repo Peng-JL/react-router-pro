@@ -3,7 +3,7 @@ const Layout = () => {
     return (
         <div>
             一级路由layout
-            <Link to="/board">面板</Link>
+            <Link to="/">面板</Link>
             <br />
             <Link to="/about">关于</Link>
             <Outlet />
